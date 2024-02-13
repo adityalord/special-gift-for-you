@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e6; /* Light pink background */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Hide overflowing animations */
+        }
+        #content {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+        }
+        h1, p {
+            color: #333; /* Dark gray text */
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #ff6666; /* Red button color */
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #ff4d4d; /* Darker red color on hover */
+        }
+        .heart {
+            position: absolute;
+            color: #ff6666; /* Red heart color */
+            animation: heartbeat 1s infinite alternate; /* Heartbeat animation */
+        }
+        @keyframes heartbeat {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.1);
+            }
+        }
+        .love-message {
+            position: absolute;
+            color: #ff6666; /* Red color for love message */
+            font-size: 20px;
+            animation: float 5s infinite; /* Floating animation */
+            opacity: 0; /* Initially invisible */
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+        }
+        .tease {
+            font-size: 18px;
+            color: #ff9999; /* Pink color for teasing touch */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>FOR YOU...!</h1>
+        <p>In your embrace, I find my home. Will you be mine forever?</p>
+        <p>With you, every moment feels like a fairytale. Will you write the next chapter with me?</p>
+        <button onclick="closeSurprise()">Close</button>
+    </div>
+
+    <!-- Love animations -->
+    <div class="heart" style="top: 20%; left: 10%; font-size: 24px;">❤️</div>
+    <div class="heart" style="top: 40%; left: 80%; font-size: 20px;">❤️</div>
+    <div class="heart" style="top: 60%; left: 30%; font-size: 28px;">❤️</div>
+    <div class="heart" style="top: 80%; left: 70%; font-size: 26px;">❤️</div>
+
+    <!-- Love message animation -->
+    <div class="love-message">I Love You</div>
+
+    <script>
+        function closeSurprise() {
+            window.close();
+        }
+    </script>
+</body>
+</html>

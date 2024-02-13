@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Spend the Rest of Your Life with Me?</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e6; /* Light pink background */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Hide overflowing animations */
+            font-size: large;
+        }
+        h1, p {
+            color: #333; /* Dark gray text */
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: #ff6666; /* Red button color */
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #ff4d4d; /* Darker red color on hover */
+        }
+        .heart {
+            position: absolute;
+            color: #ff6666; /* Red heart color */
+            animation: heartbeat 1s infinite alternate; /* Heartbeat animation */
+        }
+        @keyframes heartbeat {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.1);
+            }
+        }
+        .love-message {
+            position: absolute;
+            color: #ff6666; /* Red color for love message */
+            font-size: 20px;
+            animation: float 5s infinite; /* Floating animation */
+            opacity: 0; /* Initially invisible */
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+        }
+        .tease {
+            font-size: 18px;
+            color: #ff9999; /* Pink color for teasing touch */
+            margin-top: 20px;
+        }
+
+        /* Animation for the "I need some time to think..." button */
+        #thinkButton {
+            animation: runAway 5s infinite linear alternate;
+            position: fixed;
+            z-index: 9999; /* Ensure button is on top of other content */
+        }
+        
+       
+    </style>
+</head>
+<body>
+    <h1>Will You Spend the Rest of Your Life with Me?</h1>
+    <p>Hey Love,</p>
+    <p>I've been thinking about us...</p>
+    <p>How every touch, every glance ignites a fire within me...</p>
+    <p>And I can't help but wonder...</p>
+    <p>Will you join me in exploring the depths of passion...</p>
+    <p>...and spend the rest of your life with me?</p>
+    <button onclick="acceptProposal()">Yes, I'll spend my life with you!</button>
+    <button id="thinkButton" onclick="forceAcceptProposal()">I need some time to think...</button>
+    <p class="tease">Get ready for a lifetime of intimate moments and boundless love! 😘</p>
+    <button onclick="openSurprisePage()">Press me for a surprise</button>
+    <button onclick="openaskingpage()">I WANT SOMETHING</button>
+
+    <!-- Love animations -->
+    <div class="heart" style="top: 20%; left: 10%; font-size: 24px;">❤️</div>
+    <div class="heart" style="top: 40%; left: 80%; font-size: 20px;">❤️</div>
+    <div class="heart" style="top: 60%; left: 30%; font-size: 28px;">❤️</div>
+    <div class="heart" style="top: 80%; left: 70%; font-size: 26px;">❤️</div>
+
+    <!-- Love message animation -->
+    <div class="love-message">I Love You</div>
+
+    <script>
+        function acceptProposal() {
+            alert("Yes! I'll spend my life with you! 💖");
+            window.location.href = "thank you.html"; // Redirect to thank you page
+        }
+
+        function openConfirmationPage() {
+            window.open("confirm.html", "_blank");
+            window.open("teasing.html","_blank");
+        }
+
+        function teaseHer() {
+            alert("You're the best thing that ever happened to me!");
+        }
+
+        function openSurprisePage() {
+            window.open('surprise propose.html', '_blank', 'width=3000,height=1000');
+        }
+
+        function forceAcceptProposal() {
+            const randomMessage = teasingMessages[Math.floor(Math.random() * teasingMessages.length)];
+            alert(randomMessage);
+            openConfirmationPage(); // Open confirmation page
+            window.open('thank you.html', '_blank'); // Open thank you page
+        }
+        function openaskingpage(){
+            window.open('asksomething.html', '_blank', 'width=3000,height=1000');
+        }
+
+        const teasingMessages = [
+            "I know you can't resist me for long! 😉",
+            "You're just buying time, aren't you?",
+            "I bet you're already planning our future together!",
+            "You can't escape destiny, my love!",
+            "I'll be waiting right here when you're ready to admit the truth! 😄"
+        ];
+    </script>
+</body>
+</html>
